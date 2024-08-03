@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAddresses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/colorPrimary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageAddressClose"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_close"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                android:contentDescription="@string/close_button_desc"/>
+
+            <TextView
+                android:id="@+id/tvPaymentMethods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Addresses"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/imageAddressClose"
+                app:layout_constraintStart_toEndOf="@id/imageAddressClose"
+                app:layout_constraintTop_toTopOf="@+id/imageAddressClose" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Line Divider -->
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/g_gray700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarAddresses" />
+
+    <!-- Address Title -->
+    <EditText
+        android:id="@+id/edAddressTitle"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/white_background"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="start|center_vertical"
+        android:hint="Address location Ex: Home"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topLine"
+        android:layout_marginTop="15dp"
+        android:minHeight="48dp"/>
+
+    <!-- Full Name -->
+    <EditText
+        android:id="@+id/edFullName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/white_background"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="start|center_vertical"
+        android:hint="Full Name"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edAddressTitle"
+        android:layout_marginTop="15dp"
+        android:minHeight="48dp"/>
+
+    <!-- Street -->
+    <EditText
+        android:id="@+id/edStreet"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_background"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="start|center_vertical"
+        android:hint="Street"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:singleLine="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edFullName"
+        android:minHeight="48dp" />
+
+    <!-- Phone -->
+    <EditText
+        android:id="@+id/edPhone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/white_background"
+        android:fontFamily="@font/poppins_light"
+        android:layout_marginTop="10dp"
+        android:gravity="start|center_vertical"
+        android:hint="Phone"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:phoneNumber="true"
+        android:singleLine="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edStreet"
+        android:minHeight="48dp" />
+
+    <!-- City and State -->
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edPhone"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edCity"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/white_background"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="start|center_vertical"
+            android:hint="City"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/edState"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/white_background"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="start|center_vertical"
+            android:hint="State"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:minHeight="48dp"/>
+
+    </LinearLayout>
+
+    <!-- Delete and Save Buttons -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/white_background"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:minHeight="40dp"
+            android:contentDescription="@string/delete_button_desc"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/blue_background"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:minHeight="40dp"
+            android:contentDescription="@string/save_button_desc"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressbarAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/buttonSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonSave"
+            app:layout_constraintVertical_bias="0.458" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

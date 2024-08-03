@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#A5D6A7" /> <!-- Color verde claro para la pista cuando está activada -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0" /> <!-- Color gris claro para la pista cuando está desactivada -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</selector>

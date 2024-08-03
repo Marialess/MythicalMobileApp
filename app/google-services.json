@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "164978936981",
+    "project_id": "mythical-a9af2",
+    "storage_bucket": "mythical-a9af2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164978936981:android:9a27766dbdfd8dccf01f9c",
+        "android_client_info": {
+          "package_name": "com.example.mythical"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDznkKC8h0jG1zYm4fVXJaLzl5E2bMFJPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
